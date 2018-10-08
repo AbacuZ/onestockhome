@@ -10,6 +10,18 @@ export const githubProfileController = () => {
         url: `${BASE_API}/${name}`,
         headers: headerJson
       })
+    },
+    searchRepo: async (url) => {
+      return await service.get({
+        url: `${url}`,
+        headers: headerJson
+      })
+    },
+    searchFollower: async (url) => {
+      return await service.get({
+        url: `${url}`,
+        headers: headerJson
+      })
     }
   }
 }

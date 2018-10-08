@@ -8,10 +8,12 @@ export const InputStyle = styled.div`
 
     .inputText {
         outline: none;
-        width: 100%;
         border: 0;
+        width: 80%;
         font-size: 16px;
-        line-height: 28px;
+        line-height: 30px;
+        padding: 0px 10px;
+        margin: 20px;
         border: 1px solid rgba(74, 74, 74, 1);
         border-radius: 30px;
     }

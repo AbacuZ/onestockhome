@@ -11,11 +11,10 @@ export const CardStyle = styled.div`
   flex-direction: column;
   flex-grow: 1;
   white-space: normal;
-  width: 50%;
+  width: 90%;
   height: auto;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  top:5%;
+  left:5%;
   margin-top: 20px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;

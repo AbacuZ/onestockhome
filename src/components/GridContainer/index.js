@@ -2,8 +2,7 @@ import React from 'react'
 import { 
     GridContainerStyle,
     GridItemLeftStyle,
-    GridItemRightStyle,
-    GridItemDetailStyle
+    GridItemRightStyle
 } from './style'
 
 const GridItemLeft = (props) => {
@@ -28,28 +27,17 @@ const GridItemRight = (props) => {
     )
 }
 
-const GridItemDetail = (props) => {
-    const {
-      children
-    } = props
-    return (
-      <GridItemDetailStyle>
-        {children}
-      </GridItemDetailStyle>
-    )
-}
-
 export class GridContainer extends React.Component {
     static ItemLeft = GridItemLeft
     static ItemRight = GridItemRight
-    static Detail = GridItemDetail
     render() {
         const {
-            children
+            children,
+            onClick
         } = this.props
         return (
           <React.Fragment>
-              <GridContainerStyle>
+              <GridContainerStyle onClick={onClick}>
                   {children}
               </GridContainerStyle>
           </React.Fragment>
