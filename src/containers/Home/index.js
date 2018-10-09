@@ -51,6 +51,8 @@ export class HomeContainer extends React.Component {
         isShow: true,
         username: ''
       })
+    } else {
+      alert('Not Found User')
     }
   }
 
@@ -139,13 +141,15 @@ export class HomeContainer extends React.Component {
                       Follower <Nav.Count>{dataList.followers}</Nav.Count>
                     </Nav.Menu>
                   </Nav>
+                  <div style={{ overflowY : 'auto'}}>
                     {dataListRepo.map((data, index) => {
                       return (
-                        <div key={index}>
-                          {data.name}
-                        </div>
+                          <Text key={index}>
+                            {data.name}
+                          </Text>
                       )
                     })}
+                     </div>
                     {dataListFollower.map((data, index) => {
                       return (
                         <GridContainer 
@@ -160,7 +164,9 @@ export class HomeContainer extends React.Component {
                             />
                           </GridContainer.ItemLeft>
                           <GridContainer.ItemRight>
-                            {data.login}
+                            <Text.Link>
+                              {data.login}
+                            </Text.Link>
                           </GridContainer.ItemRight>
                         </GridContainer>
                       )
